@@ -17,7 +17,7 @@ The worked example is `rectangle_from`, a function that builds a rectangle from 
 finished example opens a window, draws a blue banner and writes the banner's four numbers underneath
 it.
 
-![The finished example window: a blue banner with black text below it listing the banner's x, y, width, and height](images/first-example-output-window.png)
+![The finished example window: a blue banner with black text below it listing the banner's x, y, width, and height](images/first-usage-example/first-example-output-window.png)
 
 When you finish, you have:
 
@@ -68,7 +68,7 @@ git --version
 dotnet --version
 ```
 
-![Terminal showing the version numbers printed by node, npm, git, and dotnet](images/first-example-check-versions.png)
+![Terminal showing the version numbers printed by node, npm, git, and dotnet](images/first-usage-example/first-example-check-versions.png)
 
 Now check SplashKit's manager tool, `skm`:
 
@@ -78,7 +78,7 @@ skm help
 
 You should see a list of commands that ends with a success message.
 
-![Terminal showing the list of skm commands, ending with a success message](images/first-example-skm-help.png)
+![Terminal showing the list of skm commands, ending with a success message](images/first-usage-example/first-example-skm-help.png)
 
 If a command says `command not found`, go back to the
 [setup guide](/products/splashkit/02-setting-up). Close and reopen the terminal after installing
@@ -102,7 +102,7 @@ ls
 
 The download is about 420 MB, so wait for the line that says `Updating files: 100%`.
 
-![Terminal after cloning the repository, showing the download progress and the top-level files in the project](images/first-example-clone.png)
+![Terminal after cloning the repository, showing the download progress and the top-level files in the project](images/first-usage-example/first-example-clone.png)
 
 ### 3. Open the folder in VS Code
 
@@ -115,7 +115,7 @@ code .
 If the terminal says `code` isn't found, open VS Code and choose **File → Open Folder** instead.
 Select `README.md` in the file list to open it.
 
-![VS Code with the project folder open, the file list on the left and README.md on the right](images/first-example-open-project.png)
+![VS Code with the project folder open, the file list on the left and README.md on the right](images/first-usage-example/first-example-open-project.png)
 
 ### 4. Install the packages
 
@@ -127,7 +127,7 @@ This downloads everything the website needs into a folder called `node_modules`.
 mention vulnerabilities. This warning is normal for this project. Do not run `npm audit fix`,
 because it rewrites `package-lock.json` and that change would end up in your pull request.
 
-![Terminal at the end of npm install, showing the number of packages added and a vulnerability warning](images/first-example-npm-install.png)
+![Terminal at the end of npm install, showing the number of packages added and a vulnerability warning](images/first-usage-example/first-example-npm-install.png)
 
 ### 5. Start the website on your computer
 
@@ -137,7 +137,7 @@ npm run dev
 
 The first time, it stops with an error:
 
-![Terminal showing npm run dev stopping with a message that the Algolia DocSearch environment variables are invalid](images/first-example-dev-fails.png)
+![Terminal showing npm run dev stopping with a message that the Algolia DocSearch environment variables are invalid](images/first-usage-example/first-example-dev-fails.png)
 
 The website's search box needs three settings. You do not need real ones to work on your own
 computer, so use placeholders. In VS Code, create a new file called `.env` in the top folder of the
@@ -149,7 +149,7 @@ DOCSEARCH_API_SEARCH_KEY=placeholder
 DOCSEARCH_INDEX_NAME=placeholder
 ```
 
-![VS Code showing a .env file with three lines that set placeholder values](images/first-example-env-file.png)
+![VS Code showing a .env file with three lines that set placeholder values](images/first-usage-example/first-example-env-file.png)
 
 Git ignores `.env`, so it never goes into your commit. The search box does not work on your
 computer, and that is fine.
@@ -160,11 +160,11 @@ Run the command again:
 npm run dev
 ```
 
-![Terminal showing the website running, with a Local address of http://localhost:4321/](images/first-example-dev-runs.png)
+![Terminal showing the website running, with a Local address of http://localhost:4321/](images/first-usage-example/first-example-dev-runs.png)
 
 Open [localhost:4321](http://localhost:4321/) in your browser. The SplashKit home page appears.
 
-![Browser showing the SplashKit home page at localhost:4321](images/first-example-site-home.png)
+![Browser showing the SplashKit home page at localhost:4321](images/first-usage-example/first-example-site-home.png)
 
 Leave this terminal running. Open a second terminal for everything else. In VS Code, choose
 **Terminal → New Terminal**.
@@ -180,7 +180,7 @@ git status
 git restore scripts/json-files/usage-example-references.json
 ```
 
-![Terminal showing git status listing the changed JSON file, then git restore, then a clean git status](images/first-example-git-status.png)
+![Terminal showing git status listing the changed JSON file, then git restore, then a clean git status](images/first-usage-example/first-example-git-status.png)
 
 :::
 
@@ -205,7 +205,7 @@ Then find the function on your local website. The address is `/api/` followed by
 `#` and the function's name with hyphens. For our function, that is
 [localhost:4321/api/geometry/#rectangle-from](http://localhost:4321/api/geometry/#rectangle-from).
 
-![Browser showing the Rectangle From function on the Geometry API page](images/first-example-site-function-page.png)
+![Browser showing the Rectangle From function on the Geometry API page](images/first-usage-example/first-example-site-function-page.png)
 
 The **See Code Examples** button under **Usage** only appears when example files exist for that
 function.
@@ -221,7 +221,7 @@ including the closing quote. Press Cmd+F on macOS, or Ctrl+F on Windows and Linu
 few lines above the match shows which version you have found: this one takes `x`, `y`, `width` and
 `height`.
 
-![VS Code with api.json open and the search box highlighting the unique_global_name line for rectangle_from](images/first-example-api-json-search.png)
+![VS Code with api.json open and the search box highlighting the unique_global_name line for rectangle_from](images/first-usage-example/first-example-api-json-search.png)
 
 You can also ask the terminal. This prints every name that starts with `rectangle_from`, with its
 line number:
@@ -245,7 +245,7 @@ A branch keeps your work separate from `main`. Name it after what it does, and n
 git checkout -b add-rectangle-from-example
 ```
 
-![Terminal showing the grep result with three names, an empty search of the examples folder, and the new branch being created](images/first-example-lookup-and-branch.png)
+![Terminal showing the grep result with three names, an empty search of the examples folder, and the new branch being created](images/first-usage-example/first-example-lookup-and-branch.png)
 
 ## Write the example
 
@@ -270,7 +270,7 @@ before. The screenshot below is taken once all six exist. Yours has only five un
 
 The website shows the title from the `.txt` file as **Example 1: Banner Rectangle**.
 
-![VS Code file list showing the six new rectangle_from example files marked with a green U, with the .txt file open](images/first-example-new-files.png)
+![VS Code file list showing the six new rectangle_from example files marked with a green U, with the .txt file open](images/first-usage-example/first-example-new-files.png)
 
 ### 10. Write and run each version
 
@@ -336,7 +336,7 @@ int main()
 }
 ```
 
-![VS Code showing the C++ example with the rectangle_from line highlighted and a terminal panel below it](images/first-example-cpp-editor.png)
+![VS Code showing the C++ example with the rectangle_from line highlighted and a terminal panel below it](images/first-usage-example/first-example-cpp-editor.png)
 
 From the project folder, compile and run it in a practice folder:
 
@@ -352,7 +352,7 @@ skm clang++ ../splashkit.io-starlight/public/usage-examples/geometry/rectangle_f
 `banner`. A success message means it compiled. Then `./banner` opens the window. Close the window to
 stop the program.
 
-![Terminal showing the C++ example being compiled with skm and then run](images/first-example-cpp-compile.png)
+![Terminal showing the C++ example being compiled with skm and then run](images/first-usage-example/first-example-cpp-compile.png)
 
 </TabItem>
 <TabItem label="C#">
@@ -395,7 +395,7 @@ while (!QuitRequested())
 CloseAllWindows();
 ```
 
-![VS Code showing the top-level statements C# example with the RectangleFrom line highlighted](images/first-example-csharp-top-level-editor.png)
+![VS Code showing the top-level statements C# example with the RectangleFrom line highlighted](images/first-usage-example/first-example-csharp-top-level-editor.png)
 
 </TabItem>
 <TabItem label="Object-Oriented">
@@ -438,7 +438,7 @@ namespace RectangleFromExample
 }
 ```
 
-![VS Code showing the object-oriented C# example with the RectangleFrom line highlighted](images/first-example-csharp-oop-editor.png)
+![VS Code showing the object-oriented C# example with the RectangleFrom line highlighted](images/first-usage-example/first-example-csharp-oop-editor.png)
 
 </TabItem>
 </Tabs>
@@ -463,7 +463,7 @@ skm dotnet run
 cannot share one project, so test them one at a time: put the other version into `Program.cs` and
 run it again.
 
-![Terminal showing a new C# project being created with skm dotnet new and then built with skm dotnet build](images/first-example-csharp-build.png)
+![Terminal showing a new C# project being created with skm dotnet new and then built with skm dotnet build](images/first-usage-example/first-example-csharp-build.png)
 
 </TabItem>
 <TabItem label="Python">
@@ -512,7 +512,7 @@ skm python3 rectangle_from-1-example.py
 `py_compile` only checks the syntax, so it can not catch a wrong function name. The last command
 runs the program through SplashKit. A mistyped function name stops it with a `NameError`.
 
-![VS Code showing the Python example with a terminal panel that checks the file and then runs it](images/first-example-python-editor.png)
+![VS Code showing the Python example with a terminal panel that checks the file and then runs it](images/first-usage-example/first-example-python-editor.png)
 
 </TabItem>
 </Tabs>
@@ -523,7 +523,7 @@ Every example needs a picture of it running. Use a `.png` for a window that stay
 one, and a `.gif` when something moves or reacts to the mouse or keyboard. Name it
 `rectangle_from-1-example.png` and put it in the same folder as the other five files.
 
-![The example window with a blue banner and its four numbers](images/first-example-output-window.png)
+![The example window with a blue banner and its four numbers](images/first-usage-example/first-example-output-window.png)
 
 Take the screenshot of the running program:
 
@@ -557,14 +557,14 @@ Open
 [localhost:4321/api/geometry/#rectangle-from](http://localhost:4321/api/geometry/#rectangle-from)
 again. Under **Usage** there is now a **See Code Examples** button.
 
-![Browser showing the Rectangle From function with the See Code Examples button under Usage](images/first-example-site-example-button.png)
+![Browser showing the Rectangle From function with the See Code Examples button under Usage](images/first-usage-example/first-example-site-example-button.png)
 
 Select it, then check each tab in turn:
 
 <Tabs syncKey="code-language">
 <TabItem label="C++">
 
-![Browser showing Example 1: Banner Rectangle with the C++ tab open and rectangle_from highlighted](images/first-example-site-cpp.png)
+![Browser showing Example 1: Banner Rectangle with the C++ tab open and rectangle_from highlighted](images/first-usage-example/first-example-site-cpp.png)
 
 </TabItem>
 <TabItem label="C#">
@@ -572,12 +572,12 @@ Select it, then check each tab in turn:
 <Tabs syncKey="csharp-style">
 <TabItem label="Top-level Statements">
 
-![Browser showing the top-level statements C# tab with RectangleFrom highlighted](images/first-example-site-csharp-top-level.png)
+![Browser showing the top-level statements C# tab with RectangleFrom highlighted](images/first-usage-example/first-example-site-csharp-top-level.png)
 
 </TabItem>
 <TabItem label="Object-Oriented">
 
-![Browser showing the object-oriented C# tab with the RectangleFrom call highlighted](images/first-example-site-csharp-oop.png)
+![Browser showing the object-oriented C# tab with the RectangleFrom call highlighted](images/first-usage-example/first-example-site-csharp-oop.png)
 
 </TabItem>
 </Tabs>
@@ -585,14 +585,14 @@ Select it, then check each tab in turn:
 </TabItem>
 <TabItem label="Python">
 
-![Browser showing the Python tab with rectangle_from highlighted](images/first-example-site-python.png)
+![Browser showing the Python tab with rectangle_from highlighted](images/first-usage-example/first-example-site-python.png)
 
 </TabItem>
 </Tabs>
 
 Then scroll to the bottom of the example for the **Output** picture.
 
-![Browser showing the Output picture at the bottom of the example](images/first-example-site-output.png)
+![Browser showing the Output picture at the bottom of the example](images/first-usage-example/first-example-site-output.png)
 
 Check these things:
 
@@ -615,7 +615,7 @@ npm run build
 It takes a minute or two. Look at the last lines. You want to see `All internal links are valid` and
 `Complete!`.
 
-![Terminal at the end of npm run build, reporting that all internal links are valid and the build is complete](images/first-example-build-passes.png)
+![Terminal at the end of npm run build, reporting that all internal links are valid and the build is complete](images/first-usage-example/first-example-build-passes.png)
 
 :::note[If the build stops on invalid links]
 
@@ -655,12 +655,12 @@ The `*` matches all six files and nothing else, so you cannot add stray files by
 `git status` should list exactly six new files. Keep the message short, in the same style as the
 recent history. The command `git log --oneline -10` shows it.
 
-![Terminal showing git add, then git status listing six new files, then git commit](images/first-example-commit.png)
+![Terminal showing git add, then git status listing six new files, then git commit](images/first-usage-example/first-example-commit.png)
 
 If you prefer buttons, use the Source Control view in VS Code. Check that it lists only your six
 files, stage them, type the message, and press **Commit**.
 
-![VS Code Source Control view with the commit message typed and six changed files listed](images/first-example-source-control.png)
+![VS Code Source Control view with the commit message typed and six changed files listed](images/first-usage-example/first-example-source-control.png)
 
 ### 15. Push your branch
 
@@ -671,7 +671,7 @@ git push -u origin add-rectangle-from-example
 `origin` is your fork. The `-u` remembers the link between your local branch and the one on GitHub,
 so a plain `git push` works next time. GitHub also prints a link for opening a pull request.
 
-![Terminal showing git push sending the new branch to GitHub, with a link for opening a pull request](images/first-example-push.png)
+![Terminal showing git push sending the new branch to GitHub, with a link for opening a pull request](images/first-usage-example/first-example-push.png)
 
 ### 16. Open the pull request
 
